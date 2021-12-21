@@ -85,4 +85,13 @@ if __name__ == '__main__':
         x: int
         y: int
 
+    a = Coordinates(2, 3)
+    b = Coordinates(2, 4)
+    c = Coordinates(2, 3)
+    assert str(a) == "Coordinates(2, 3)"
+    assert repr(a) == "Coordinates(2, 3)"
+    assert a.x == 2
+    assert a.y == 3
+    assert a != b
+    assert a == c
 
