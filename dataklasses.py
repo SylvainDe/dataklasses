@@ -94,4 +94,11 @@ if __name__ == '__main__':
     assert a.y == 3
     assert a != b
     assert a == c
+    if '__iter__' in vars(Coordinates):
+        assert list(a) == [2, 3]
+    if '__hash__' in vars(Coordinates):
+        coords = set()
+        coords.add(a)
+        assert a in coords
+        assert b not in coords
 
